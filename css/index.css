@@ -1,0 +1,306 @@
+/***** Propiedades generales *****/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/***** Cabecera *****/
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../img/background/back.webp");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+
+.header__title {
+    margin: 15px 0px;
+    color: aliceblue;
+    font-size: 2.3em;
+}
+
+.header__desc {
+    margin: 15px 0px;
+    color: aliceblue;
+}
+
+.header__search {
+    width: 70%;
+    height: 30px;
+    border-radius: 0px;
+    padding-left: 5px;
+    margin-top: 25px;
+}
+
+/***** Filtros *****/
+
+.filter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+}
+
+.filter__tags {
+    width: 70%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter__button {
+    width: 145px;
+    text-decoration: none;
+    padding: 15px 5px 15px 5px;
+    background-color: lightgray;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.filter__button:hover {
+    background-color: rgb(118, 187, 230);
+    cursor: pointer;
+}
+
+.filter__button:nth-child(3) {
+    background-color: rgb(58, 155, 58);
+}
+
+.filter__button:nth-child(3):hover {
+    background-color: rgb(63, 173, 63);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+[value="Accesorios"]:checked~.content .content__insertImg .content__article:not([data-category="Accesorios"]) {
+    display: none;
+}
+
+[value="Tecnología"]:checked~.content .content__insertImg .content__article:not([data-category="Tecnología"]) {
+    display: none;
+}
+
+[value="Hogar"]:checked~.content .content__insertImg .content__article:not([data-category="Hogar"]) {
+    display: none;
+}
+
+[value="Salud"]:checked~.content .content__insertImg .content__article:not([data-category="Salud"]) {
+    display: none;
+}
+
+[value="Infantil"]:checked~.content .content__insertImg .content__article:not([data-category="Infantil"]) {
+    display: none;
+}
+
+/***** Galería *****/
+
+.content {
+    width: 72%;
+}
+
+.content__insertImg {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    height: 250px;
+    flex-wrap: wrap;
+}
+
+.content__article {
+    width: calc(25% - 24px);
+    height: 250px;
+    margin: 12px 12px;
+    z-index: 100;
+}
+
+.content__image {
+    width: 100%;
+    height: 250px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+.content__image:hover {
+    transition: 0.8s;
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+/***** Modal *****/
+
+.previewBox {
+    position: fixed;
+    width: 79%;
+    max-height: 80vh;
+    top: 50%;
+    left: 50%;
+    z-index: 2000;
+    transform: translate(-50%, -50%) scale(0.9);
+    padding: 0 5px 5px 5px;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+}
+
+.previewBox.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+}
+
+.details {
+    display: none;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2002;
+}
+
+.display {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px 12px 32px;
+}
+
+
+.display__icon {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 30px;
+    width: calc(100% / 3);
+    display: flex;
+    justify-content: right;
+    height: 100%;
+    text-align: right;
+}
+
+.display__icon:hover {
+    color: #fff;
+}
+
+.display__title {
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+.descBox {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.descBox__name {
+    color: white;
+    width: calc(100% / 3);
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: 400;
+    height: 100%;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.display__title p {
+    margin: 0 5px;
+    color: #fff;
+}
+
+.display__currentImg {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.display__totalImg {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.imageBox {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.imageBox__slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.imageBox__slide--prev {
+    left: -12%;
+}
+
+.imageBox__slide--prev:hover {
+    color: #fff;
+}
+
+.imageBox__icon {
+    font-size: 1.2em;
+}
+
+.imageBox__slide--next {
+    right: -12%;
+}
+
+.imageBox__slide--next:hover {
+    color: #fff;
+}
+
+.imageBox__image {
+    width: auto;
+    border-radius: 0 0 3px 3px;
+    height: 72vh;
+}
+
+.shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1999;
+}

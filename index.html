@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <!-- Cabecera -->
+        <header>
+            <h1 class="header__title">Interactive Photo Gallery</h1>
+            <p class="header__desc">¡Encuentra tu tema de interes aqui!</p>
+            <input type="text" class="header__search" placeholder="¿Que deseas buscar?">
+        </header>
+        <!-- Filtros -->
+        <div class="filter">
+            <input type="radio" name="filters" id="Accesorios" value="Accesorios">
+            <input type="radio" name="filters" id="Tecnología" value="Tecnología">
+            <input type="radio" name="filters" id="T" value="T">
+            <input type="radio" name="filters" id="Hogar" value="Hogar">
+            <input type="radio" name="filters" id="Salud" value="Salud">
+
+            <div class="filter__tags">
+                <label class="filter__button" for="Accesorios">Accesorios</label>
+                <label class="filter__button" for="Tecnología">Tecnología</label>
+                <label class="filter__button" for="T">T</label>
+                <label class="filter__button" for="Hogar">Hogar</label>
+                <label class="filter__button" for="Salud">Salud</label>
+
+            </div>
+            <div class="content">
+                <span class="content__insertImg" id="insertImg"></span>
+
+                </span>
+            </div>
+
+        </div>
+
+        <!-- Modal -->
+        <div class="previewBox">
+            <div class="imageBox">
+                <div class="imageBox__slide imageBox__slide--prev">
+                    <i class="imageBox__icon fa-solid fa-solid fa-angle-left"></i>
+                </div>
+                <div class="imageBox__slide imageBox__slide--next">
+                    <i class="imageBox__icon fa-solid fa-solid fa-angle-right"></i>
+                </div>
+                <img class="imageBox__image" src="" alt="">
+            </div>
+            <div class="descBox">
+                <span class="descBox__name"></span>
+            </div>
+        </div>
+        <div class="details">
+            <div class="display">
+                <span class="display__title">
+                    Imagen <p class="display__currentImg"></p>
+                    de <p class="display__totalImg"></p>
+                </span>
+
+                <span class="display__icon fa-solid fa-xmark"></span>
+            </div>
+        </div>
+        <div class="shadow">
+        </div>
+    </main>
+
+    <script src="./js/imagen.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
