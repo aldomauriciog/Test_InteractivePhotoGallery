@@ -41,47 +41,9 @@ totalImg = document.querySelector(".display__totalImg"),
 shadow = document.querySelector(".shadow"),
 details = document.querySelector(".details"),
 previewInfo = document.querySelector(".descBox__name"),
-titleInfo = document.querySelector(".display__title"),
-//SelectInfo = document.querySelector(".nav-stick .logo a"),
-//Icon = document.querySelector(".nav-stick .open i"),
-// CIcono = document.querySelector(".nav-stick .open"),
-// NavBody = document.querySelector(".nav-body");
-
-
+titleInfo = document.querySelector(".display__title")
 
 window.onload = ()=>{
-
-    // let categoria = document.getElementsByClassName("filter__button")[1].textContent;
-    // console.log(categoria);
-
-    // if (categoria == "Accesorios"){
-    //     gallery.length = 3;
-    //     i = 0;
-    // } else if(categoria == "Tecnología"){
-    //     gallery.length = 9;
-    //     i = 4;
-    // } else if(categoria == "Hogar"){
-    //     gallery.length = 13;
-    //     i = 10;
-    // } else if(categoria == "Salud"){
-    //     gallery.length = 17;
-    //     i = 14;
-    // } else{
-    //     gallery.length = 22;
-    //     i = 18;
-    // }
-
-    // console.log(gallery.length);
-    // console.log(i);
-
-    // nroImagenes = jsonData.forEach(function(img){
-    //     console.log(img.categoria);
-    //     if(img.categoria == categoria){
-    //         gallery.length = 
-    //     }
-    // });
-
-    //console.log(gallery);
 
     for (let i = 0; i < gallery.length; i++) {
         totalImg.textContent = gallery.length;
