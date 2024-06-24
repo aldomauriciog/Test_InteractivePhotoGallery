@@ -36,8 +36,6 @@ const gallery = document.querySelectorAll("#insertImg #contenedor")
 previewBox = document.querySelector(".previewBox"),
 previewImg = previewBox.querySelector("img"),
 closeIcon = document.querySelector(".display__icon"),
-currentImg = document.querySelector(".display__currentImg"),
-totalImg = document.querySelector(".display__totalImg"),
 shadow = document.querySelector(".shadow"),
 details = document.querySelector(".details"),
 previewInfo = document.querySelector(".descBox__name"),
@@ -46,14 +44,12 @@ titleInfo = document.querySelector(".display__title")
 window.onload = ()=>{
 
     for (let i = 0; i < gallery.length; i++) {
-        totalImg.textContent = gallery.length;
         let  newIndex = i
         let clickIngIndex;
         gallery[i].onclick = ()=>{
 
             clickIngIndex = newIndex;
             function preview(){
-                currentImg.textContent = newIndex + 1;
                 let selectImgUrl;
                 let selectImgInfo;
 
